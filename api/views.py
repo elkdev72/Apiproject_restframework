@@ -8,3 +8,10 @@ class BlogPostListCreate(generics.ListCreateAPIView):
     queryset = Blogpost.objects.all()
     serializer_class = BlogPostSerializer
     
+
+
+class BlogPostRetriveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+    queryset= Blogpost.objects.all()
+    serializer_class = BlogPostSerializer
+    lookup_field = "pk"
+    
